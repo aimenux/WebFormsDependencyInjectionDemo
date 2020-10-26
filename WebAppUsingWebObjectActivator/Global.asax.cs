@@ -2,11 +2,9 @@
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Domain;
-using Microsoft.AspNet.WebFormsDependencyInjection.Unity;
-using Unity;
+using WebAppUsingWebObjectActivator.Ioc;
 
-namespace WebAppUsingUnity
+namespace WebAppUsingWebObjectActivator
 {
     public class Global : HttpApplication
     {
@@ -17,10 +15,9 @@ namespace WebAppUsingUnity
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        private void ConfigureIoc()
+        private static void ConfigureIoc()
         {
-            var container = this.AddUnity();
-            container.RegisterSingleton<IDummyService, DummyService>();
+            HttpRuntime.WebObjectActivator = new WebFormsServiceProvider();
         }
     }
 }
