@@ -10,6 +10,8 @@ namespace WebAppUsingAutofac
 {
     public class Global : HttpApplication
     {
+        private const IocContainerType ContainerType = IocContainerType.Autofac;
+
         public void Application_Start(object sender, EventArgs e)
         {
             ConfigureIoc();
@@ -23,7 +25,7 @@ namespace WebAppUsingAutofac
             builder.RegisterSource(new AutofacRegistrationSource());
             builder.RegisterType<DummyService>().As<IDummyService>().SingleInstance();
             var container = builder.Build();
-            HttpRuntime.WebObjectActivator = new AutofacServiceProvider(container);
+            HttpRuntime.WebObjectActivator = IocFactory.CreateServiceProvider(ContainerType, container);
         }
     }
 }

@@ -352,8 +352,10 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Ioc\AutofacPerRequestServiceProvider.cs" />
     <Compile Include="Ioc\AutofacServiceProvider.cs" />
     <Compile Include="Ioc\AutofacRegistrationSource.cs" />
+    <Compile Include="Ioc\IocFactory.cs" />
     <Compile Include="Pages\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
