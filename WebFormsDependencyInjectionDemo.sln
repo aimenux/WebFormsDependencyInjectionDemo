@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppUsingWebObjectActivator", "WebAppUsingWebObjectActivator\WebAppUsingWebObjectActivator.csproj", "{7DFC6F8F-7311-44A5-BE2E-5738E96A62B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppUsingSimpleInjector", "WebAppUsingSimpleInjector\WebAppUsingSimpleInjector.csproj", "{AB35C8B6-B3E2-47EA-B0DB-525BF7806756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7DFC6F8F-7311-44A5-BE2E-5738E96A62B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DFC6F8F-7311-44A5-BE2E-5738E96A62B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DFC6F8F-7311-44A5-BE2E-5738E96A62B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB35C8B6-B3E2-47EA-B0DB-525BF7806756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB35C8B6-B3E2-47EA-B0DB-525BF7806756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB35C8B6-B3E2-47EA-B0DB-525BF7806756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB35C8B6-B3E2-47EA-B0DB-525BF7806756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
