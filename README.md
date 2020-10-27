@@ -1,3 +1,4 @@
+![CI](https://github.com/aimenux/WebFormsDependencyInjectionDemo/workflows/CI/badge.svg)
 # WebFormsDependencyInjectionDemo
 ```
 Using dependency injection with legacy webforms
