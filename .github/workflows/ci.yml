@@ -16,8 +16,13 @@ jobs:
     runs-on: [windows-latest]
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v1    
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.2
+      - name: Restore Packages
+        run: nuget restore WebFormsDependencyInjectionDemo.sln
       - name: Build DotNET
         run: |
-           cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
-           .\MSBuild.exe $Env:GITHUB_WORKSPACE\WebFormsDependencyInjectionDemo.sln
+         MSBuild.exe $Env:GITHUB_WORKSPACE\WebFormsDependencyInjectionDemo.sln
